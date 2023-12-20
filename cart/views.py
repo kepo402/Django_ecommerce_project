@@ -7,6 +7,7 @@ def addtocart(request, slug):
     item = get_object_or_404(Product, slug=slug)
     order_item, created = Cart.objects.get_or_create(
         item= item,
-        user = request.user
-        ) 
+        user = request.user,
+        )
+    order_qs = Order.objects.filter(user=request.user, ordered=False) 
     
