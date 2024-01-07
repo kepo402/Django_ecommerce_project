@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.apps import apps
-from .cart.models import Cart, Order
+from .models import Cart, Order
 from django.http import HttpResponse
 from django.contrib import messages
 

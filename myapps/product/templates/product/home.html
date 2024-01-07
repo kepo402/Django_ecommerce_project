@@ -20,7 +20,8 @@
                             <p class="card-text"> {{ product.previewtext }}</p>
                         </div>
                         <div class="card-footer text-center" >
-                            <a href="#" class="btn btn-success"> Add to Cart </a>
+                            <input type="number" class="form-control" value="1" min="1">
+                            <a href="{% url 'addtocart' product.slug %}" class="btn btn-success"> Add to Cart </a>
                         </div>
                     </div>
                 </div>

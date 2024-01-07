@@ -12,7 +12,7 @@ class Category(models.Model):
 class Product(models.Model):
     mainimage = models.ImageField(upload_to='product/', blank=True)
     name = models.CharField(max_length=300)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     previewtext = models.TextField(max_length=200, verbose_name='Preview Text')
     detailtext = models.TextField(max_length=1000, verbose_name='Detail Text')
